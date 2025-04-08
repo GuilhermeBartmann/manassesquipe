@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manassés - Página Inicial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="w-full relative">
+    <img id="headerImage" src="assets/images/manasses.png" alt="Header" class="w-full h-38 md:h-64 object-cover">
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800 p-4 sticky top-0 z-10 shadow-md">
+    <div class="max-w-3xl mx-auto flex justify-center md:justify-between flex-wrap">
+      <a href="index.html" class="text-indigo-300 border-b-2 border-indigo-500 px-3 py-2">Home</a>
+      <a href="pages/sobre.html" class="text-white hover:text-indigo-300 px-3 py-2">Sobre</a>
+      <a href="pages/galeria.html" class="text-white hover:text-indigo-300 px-3 py-2">Galeria</a>
+      <a href="pages/contato.html" class="text-white hover:text-indigo-300 px-3 py-2">Contato</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-grow px-4 py-6 md:px-8 md:py-10 max-w-3xl mx-auto w-full">
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">VOCÊ FOI ESCOLHIDO!</h2>
+      <p class="text-gray-300 mb-4">
+        Para fazer parte dessa equipe que tem como foco impactar a vida dos Jovens de Juiz de Fora.
+      </p>
+
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Dê um Play</h2>
+      <div class="max-w-xs mx-auto"><!-- Container com largura máxima menor e centralizado -->
+        <div class="relative pt-[177.78%] w-full overflow-hidden rounded-lg shadow-lg"><!-- Proporção mais vertical (16:9 invertido para 9:16) -->
+          <!-- Thumbnail do vídeo (substituir pela sua imagem) -->
+          <div id="videoPlaceholder" class="absolute inset-0 bg-gray-800 flex items-center justify-center cursor-pointer">
+            <img src="assets/images/manasses.png" alt="Miniatura do vídeo" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+              <i class="fas fa-play-circle text-5xl text-white opacity-80"></i>
+            </div>
+            <p class="absolute bottom-4 text-center w-full text-white">Clique para reproduzir</p>
+          </div>
+          
+          <!-- Player de vídeo (fica escondido até o usuário clicar) -->
+          <iframe id="videoFrame" class="absolute inset-0 w-full h-full hidden" 
+                  src="" 
+                  title="Vídeo do Manassés" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      <p class="text-sm text-gray-400 mt-2 text-center">Clique na imagem para reproduzir o vídeo</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6 px-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="flex flex-col md:flex-row md:justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <p class="text-gray-400">&copy; 2025 Manassés. Todos os direitos reservados.</p>
+        </div>
+        <div>
+          <!-- <button id="saibaMaisBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition-colors">
+            Saiba Mais
+          </button> -->
+        </div>
+      </div>
+      <div class="mt-6 border-t border-gray-700 pt-6">
+        <div class="flex justify-center space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal para "Saiba Mais" -->
+  <!-- <div id="saibaMaisModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+    <div class="bg-gray-800 p-6 rounded-lg max-w-md w-full mx-4">
+      <h2 class="text-xl font-bold mb-4">Saiba Mais sobre Manassés</h2>
+      <p class="text-gray-300 mb-4">
+        Adicione aqui informações adicionais sobre o Manassés. Este modal pode conter detalhes sobre história, 
+        missão, visão, valores ou qualquer outro conteúdo relevante para seu público.
+      </p>
+      <p class="text-gray-300 mb-4">
+        Você também pode incluir informações de contato ou links para redes sociais para que os visitantes 
+        possam se conectar e aprender mais.
+      </p>
+      <button id="fecharModalBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md mt-2 w-full">
+        Fechar
+      </button>
+    </div>
+  </div> -->
+
+  <!-- Carregue o script principal -->
+  <script src="js/main.js"></script>
+</body>
+</html>

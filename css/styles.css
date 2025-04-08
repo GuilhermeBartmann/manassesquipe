@@ -1,0 +1,68 @@
+/* Estilos básicos */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Animações */
+.fade-in {
+  animation: fadeIn 0.8s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efeitos de hover */
+#videoPlaceholder {
+  transition: transform 0.3s ease;
+}
+
+#videoPlaceholder:hover {
+  transform: scale(1.02);
+}
+
+#videoPlaceholder i {
+  transition: all 0.3s ease;
+}
+
+#videoPlaceholder:hover i {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* Navegação */
+nav a {
+  transition: all 0.3s ease;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Links de redes sociais no footer */
+footer .fab {
+  transition: transform 0.3s ease;
+}
+
+footer a:hover .fab {
+  transform: scale(1.2);
+}
+
+/* Modal */
+#saibaMaisModal {
+  backdrop-filter: blur(4px);
+}
+
+/* Responsividade para elementos de mídia */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
